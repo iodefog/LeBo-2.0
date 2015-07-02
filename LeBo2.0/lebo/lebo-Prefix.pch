@@ -1,0 +1,27 @@
+//
+// Prefix header for all source files of the 'lebo' target in the 'lebo' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import <CoreData/CoreData.h>
+    #import <CoreLocation/CoreLocation.h>
+    #import <QuartzCore/QuartzCore.h>
+    #import <AudioToolbox/AudioToolbox.h>
+    #import "LBModel.h"
+    #import "LBBaseUI.h"
+    #import "LBCommon.h"
+    #import "LBFileClient.h"
+    #ifndef __OPTIMIZE__
+    # define NSLog(...) NSLog(__VA_ARGS__)
+    #else
+    # define NSLog(...) {}
+    #endif
+#endif
